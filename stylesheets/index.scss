@@ -27,10 +27,6 @@ $button-size:   10vh;
 }
 
 // Styles
-* {
-    @include box-sizing(border-box);
-}
-
 #tv-container {
     @include    box-shadow(0 0 100px rgba(#000, .5) inset);
     background: #110037;

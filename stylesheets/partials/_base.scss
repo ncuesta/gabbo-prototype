@@ -45,3 +45,4 @@ $default-border-radius: 8px;
 
 html, body { background: $background-color; }
 body { @include base-font; }
+body * { @include box-sizing(border-box); }
