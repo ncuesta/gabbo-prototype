@@ -1,17 +1,21 @@
 <!doctype html>
-<html lang="<%= @lang = "en" %>">
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title><%= @title %></title>
+    <title>Gabbo!</title>
     <link rel="stylesheet" href="./stylesheets/screen.css">
-    <% if @stylesheet %>
-    <link rel="stylesheet" href="./stylesheets/<%= @stylesheet %>">
-    <% end %>
+    
+    <link rel="stylesheet" href="./stylesheets/index.css">
+    
     <!--[if IE]>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
   </head>
   <body>
-    <%= yield %>
+    
+<div id="tv-container">
+  <span class="screen name">GABBO</span>
+  <a href="./gabbo.html" class="power-button">&rarr;</a>
+</div>
   </body>
 </html>

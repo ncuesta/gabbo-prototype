@@ -1,0 +1,13 @@
+<% @title = "Gabbo!" %>
+<% @stylesheet = "gabbo.css" %>
+<% @quote = random_quote %>
+
+<div id="tv-container">
+    <span class="screen">
+        <span id="quote" class="balloon"><%= @quote %></span>
+        <img id="gabbo-character" src="./images/gabbo.png" />
+    </span>
+    <a href="https://twitter.com/share?text=<%= encode @quote %>" class="power-button tweet">
+        <img src="./images/tweet.png" alt="Tweet" />
+    </a>
+</div>

@@ -3,82 +3,34 @@
 //
 
 @import "partials/base";
+@import "partials/global";
+
 @import url(http://fonts.googleapis.com/css?family=Oswald:300);
 
-
-// Variables
-$white:         #c6dbcf;
-$black:         #0d0c06;
-$button-color:  #36315e;
-$button-size:   10vh;
-
-// Mixins
-@mixin animation($name, $duration: 1s, $loop: infinite) {
-    -webkit-animation: $name $duration $loop;
-       -moz-animation: $name $duration $loop;
-         -o-animation: $name $duration $loop;
-            animation: $name $duration $loop;
-}
 
 // Screen animation
 @-webkit-keyframes inverse {
     0%  { color: $white; background: $black; }
     50% { color: $black; background: $white; }
 }
+@-moz-keyframes inverse {
+    0%  { color: $white; background: $black; }
+    50% { color: $black; background: $white; }
+}
+@-o-keyframes inverse {
+    0%  { color: $white; background: $black; }
+    50% { color: $black; background: $white; }
+}
+@keyframes inverse {
+    0%  { color: $white; background: $black; }
+    50% { color: $black; background: $white; }
+}
 
 // Styles
 #tv-container {
-    @include    box-shadow(0 0 100px rgba(#000, .5) inset);
-    background: #110037;
-    position:   relative;
-    height:     100vh;
-    text-align: center;
-    padding:    10vh 5vw;
-    border: {
-        style:  solid;
-        width:  10px;
-        color:  #36315e;
-    };
-
     .name {
-        @include     inline-block;
-        @include     border-radius(30%);
-        @include     box-shadow(0 0 100px rgba(#000, .5) inset);
         @include     animation(inverse, .1s, infinite);
         font-family: Oswald, sans-serif;
         font-size:   32vw;
-        line-height: 80vh;
-        color:       $white;
-        background:  $black;
-        overflow:    hidden;
-        max-width:   80vw;
-        max-height:  80vh;
-    }
-
-    .power-button {
-        @include         inline-block;
-        @include         box-shadow(0 5px 10px rgba(#000, .5), 0 0 10px rgba(#fff, .15) inset);
-        @include         transition(all .25s linear);
-        position:        absolute;
-        bottom:          5%;
-        right:           5%;
-        color:           $white;
-        text-decoration: none;
-        background:      $button-color;
-        width:           $button-size;
-        height:          $button-size;
-        line-height:     $button-size - 1;
-        border: {
-            style:  solid;
-            width:  3px;
-            color:  darken($button-color, 10%);
-            radius: 100%;
-        };
-
-        &:hover {
-            @include      box-shadow(0 5px 10px rgba(#000, .5), 0 0 10px rgba(#fff, .5), 0 0 10px rgba(#fff, .25) inset);
-            border-color: $button-color;
-            background:   lighten($button-color, 10%);
-        }
     }
 }

@@ -1,0 +1,59 @@
+//
+// Gabbo page Stylesheet
+//
+
+@import "partials/base";
+@import "partials/global";
+
+@import url(http://fonts.googleapis.com/css?family=Oregano);
+
+
+// Variables
+$balloon-bg: #fff;
+
+// Styles
+#tv-container {
+    .screen {
+        background: $white;
+        text-align: right;
+
+        #gabbo-character {
+            @include        inline-block;
+            vertical-align: bottom;
+        }
+
+        .balloon {
+            @include        border-radius(100%);
+            @include        box-shadow(-10px 0 0 rgba($black, .5));
+            position:       absolute;
+            top:            25%;
+            left:           25%;
+            width:          50%;
+            min-height:     20%;
+            max-height:     30%;
+            background:     $balloon-bg;
+            line-height:    1.2;
+            padding:        5% 8%;
+            color:          $black;
+            text-align:     center;
+            font-family:    Oregano, cursive;
+            white-space:    pre-wrap;
+
+            &::after {
+                @include    inline-block;
+                @include    transform(rotate(-45deg));
+                content:    '';
+                position:   absolute;
+                height:     0;
+                width:      0;
+                bottom:     -10px;
+                right:      5%;
+                border: {
+                    style:  solid;
+                    width:  40px 20px 20px;
+                    color:  $balloon-bg transparent transparent transparent;
+                };
+            }
+        }
+    }
+}
